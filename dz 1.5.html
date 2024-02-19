@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      margin: 0;
+      padding-top: 12%;
+      text-transform: uppercase;
+      position: absolute;
+      z-index: -1;
+      left: 42%;
+    }
+
+    div div {
+      background-color: #872d61;
+      width: 350px;
+      height: 200px;
+      border: 2px solid #651142;
+    }
+
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    .left {
+      transform-origin: left center;
+    }
+
+    .right {
+      transform-origin: right center;
+    }
+
+    .center {
+      position: relative;
+      perspective: 1000px;
+      text-align: center;
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    .center:hover .left {
+      transform: rotateY(60deg);
+    }
+
+    .center:hover .right {
+      transform: rotateY(-60deg);
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="flex center">
+    <h1>hello</h1>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+
+</body>
+
+</html>

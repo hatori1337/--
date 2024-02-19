@@ -1,36 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Tutorial</title>
-</head>
-<body>
-    <div class="bigblock">
-        <h1>HTML Tutorial</h1>
-        <hr>
-        <h2>What is HTML?</h2>
-        <p><b>Hypertext Markup Language (HTML) </b>is the standard markup language for creating web pages and web applications.
+<html>
 
-            Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-            
-            HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactivze forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <span> < img /> </span> and < input /> directly introduce content into the page. Other tags such as <p> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.</p>
-            <hr>
-            <h2>Markup</h2>
-            <p>
-                HTML markup consists of several key components, including those called tags (and their attributes), character-based data types, character references and entity references. HTML tags most commonly come in pairs like < h1> and </>, although some represent empty elements and so are unpaired, for example <img>. The first tag in such a pair is the start tag, and the second is the end tag (they are also called opening tags and closing tags).
-            </p>
-    </div>
-</body>
-<style>
-    .bigblock {
-        width: 650px;
-        margin: 0 auto;
-        background-color: gray
+<head>
+  <title>Форма для ввода данных кредитной карты</title>
+  <style>
+    body {
+
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
+
     h1 {
-        display: flex;
-        justify-content: center;
+      color: white;
+      right: 150px;
+      background-color: orangered;
+      text-transform: uppercase;
+      position: relative;
+      padding: 10px;
     }
-</style>
+
+    form {
+      position: relative;
+      background: rgb(0, 158, 84);
+      width: 400px;
+      margin: 0 auto;
+      padding: 50px;
+      border-radius: 10px;
+
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    input[type="text"] {
+      width: 45%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .expiration-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    form {
+      position: relative;
+      top: 300px;
+    }
+    input[type="text2"] {
+      width: 20%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    ::-webkit-input-placeholder{
+      color: rgba(0, 0, 0, 0.282);
+    }
+    input.card{
+      left: -100px;
+      position: relative;
+    }
+    input.card{
+      left: -100px;
+      position: relative;
+    }
+    input.card2{
+      left: -100px;
+      position: relative;
+    }
+    input.card3{
+      left: -60px;
+      position: relative;
+    }
+    span.cvv{
+      top: -30px;
+      position: relative
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <h1 class="card">Credit card details</h1>
+    <label for="card-number">Card Number</label>
+    <input class="card" type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+    <label for="card-owner">Name On Card</label>
+    <input class="card" type="text" id="card-owner" placeholder="Name Surname" name="card-owner" required>
+    <label for="expiration-date">Expiry Date</label>
+    <div class="expiration-inputs">
+      <input class="mm" type="text2" id="expiration-month" name="expiration-month" placeholder="ММ" required>
+      <input class="gg" type="text2" id="expiration-year" name="expiration-year" placeholder="ГГ" required>
+      <label for="cvv"> <span class="cvv">CVV</span></label>
+      <input class="card3" type="text2" id="cvv" name="cvv" placeholder="***" required>
+    </div>
+
+  </form>
+</body>
+
 </html>
